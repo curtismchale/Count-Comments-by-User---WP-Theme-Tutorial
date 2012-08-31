@@ -29,6 +29,10 @@ theme where you want to display the number of comments made by a user
 
 == Changelog ==
 
+= 1.1 =
+
+- added the github plugin updater
+
 = 1.0 =
 
 - initial working plugin commit
