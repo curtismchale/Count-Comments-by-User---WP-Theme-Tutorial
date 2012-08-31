@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Count User Comments
-Plugin URI: 
+Plugin URI: https://github.com/curtismchale/Count-Comments-by-User---WP-Theme-Tutorial
 Description: Counts the comments made by a registered user. They have to be signed in while making the comment to have it add to the total.
-Version: 1.0
+Version: 1.1
 Author: WP Theme Tutorial, Curis McHale
 Author URI: http://wpthemetutorial.com
 License: GPLv2 or later
