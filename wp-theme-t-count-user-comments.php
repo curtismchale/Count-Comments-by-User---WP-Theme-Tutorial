@@ -26,6 +26,40 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
 /**
+ * All the config stuff so we can update our plugin from GitHub
+ *
+ * @since   1.1
+ * @author  WP Theme Tutorial, Curtis McHale
+ */
+function theme_t_count_users_wp_github_update() {
+
+	include_once( plugin_dir_path( __FILE__ ) . '/plugin-updater/updater.php' );
+
+	define('WP_GITHUB_FORCE_UPDATE', true);
+
+	if (is_admin()) { // note the use of is_admin() to double check that this is happening in the admin
+
+		$config = array(
+			'slug' => plugin_basename(__FILE__),
+			'proper_folder_name' => 'wp-theme-t-count-user-comments',
+			'api_url' => 'https://api.github.com/repos/curtismchale/Count-Comments-by-User---WP-Theme-Tutorial',
+			'raw_url' => 'https://raw.github.com/curtismchale/Count-Comments-by-User---WP-Theme-Tutorial/master',
+			'github_url' => 'https://github.com/curtismchale/Count-Comments-by-User---WP-Theme-Tutorial',
+			'zip_url' => 'https://github.com/curtismchale/Count-Comments-by-User---WP-Theme-Tutorial/zipball/master',
+			'sslverify' => true,
+			'requires' => '3.4',
+			'tested' => '3.4',
+			'readme' => 'readme.txt'
+		);
+
+		new WPGitHubUpdater($config);
+
+	}
+
+}
+add_action( 'init', 'theme_t_count_users_wp_github_update' );
+
+/**
  * Number of comments user has written. This is a modified version of the count_user_posts
  * function from WordPress core.
  *

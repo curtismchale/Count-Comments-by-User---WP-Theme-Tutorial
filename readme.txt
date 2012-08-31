@@ -4,9 +4,9 @@ Contributors: Curtis McHale
 Tags: count comments, admin
 Requires at least: 3.4
 Tested up to: 3.4
-Stable tag: 1.0
+Stable tag: 1.1
 
-~Current Version:1.0~
+~Current Version:1.1~
 
 Adds a function that can count posts made by registered users. Adds
 custom admin column to users.php that shows the number of comments made
